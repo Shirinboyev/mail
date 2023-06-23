@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mail/friend.dart';
 import 'package:mail/getPage.dart';
+import 'package:mail/pages/firstPage.dart';
 
 void main() {
   runApp(
@@ -7,7 +9,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       initialRoute: 'getPage',
       routes: {
-        'getPage': (context) => getPage(),
+        'getPage': (context) => Friend(),
       },
       home: HomePage(),
     ),
