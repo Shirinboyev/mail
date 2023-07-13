@@ -9,7 +9,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       initialRoute: 'getPage',
       routes: {
-        'getPage': (context) => Friend(),
+        'getPage': (context) => getPage(),
       },
       home: HomePage(),
     ),

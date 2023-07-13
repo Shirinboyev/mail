@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mail/getPage.dart';
+import 'package:mail/loginPage.dart';
 import 'package:mail/pages/firstPage.dart';
-import 'package:mail/widgets.dart';
-
 class Friend extends StatefulWidget {
   const Friend({super.key});
 
@@ -15,6 +15,26 @@ class _FriendState extends State<Friend> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: (Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          elevation: 0.0,
+          backgroundColor: Colors.white,
+          leading: OutlinedButton(
+            style: ElevatedButton.styleFrom(shape: CircleBorder()),
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginPage(),
+                ),
+              );
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
@@ -44,6 +64,7 @@ class _FriendState extends State<Friend> {
           },
         ),
         body: Container(
+          color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -121,78 +142,402 @@ class _FriendState extends State<Friend> {
                     ),
                   ],
                 ),
-                Column(
-                  children: [
-                    ListTile(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => FirstPage(
-                                  '      01:20',
-                                  '10:23      ',
-                                  '      12:29',
-                                  '11:23      ',
-                                  '      12:43',
-                                  '08:20      ',
-                                  '      09:26',
-                                  '05:29      ',
-                                  '      12:03',
-                                  '02:02      ',
-                                  '      11:11',
-                                  'images/robert.png',
-                                  'How are you',
-                                  'hello',
-                                  "I'm great thank's",
-                                  "I am in Paris",
-                                  'hello',
-                                  "I'm great and you",
-                                  "Very good",
-                                  'Robert Fox',
-                                  'olnine',
-                                  "Where are you now",
-                                  "I'm at home and you")),
-                        );
-                      },
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                            width: 2, color: Color.fromARGB(255, 77, 16, 151)),
-                        borderRadius: BorderRadius.circular(13),
+                Expanded(
+                  flex: 8,
+                  child: ListView(
+                    children: [
+                      SizedBox(
+                        height: 23,
                       ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Robert Fox',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                          Text('15:43')
-                        ],
+                      ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstPage(
+                                    '      01:20',
+                                    '10:23      ',
+                                    '      12:29',
+                                    '11:23      ',
+                                    '      12:43',
+                                    '08:20      ',
+                                    '      09:26',
+                                    '05:29      ',
+                                    '      12:03',
+                                    '02:02      ',
+                                    '      11:11',
+                                    'images/robert.png',
+                                    'How are you',
+                                    'hello',
+                                    "I'm great thank's",
+                                    "I am in Paris",
+                                    'hello',
+                                    "I'm great and you",
+                                    "Very good",
+                                    'Robert Fox',
+                                    'olnine',
+                                    "Where are you now",
+                                    "I'm at home and you")),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(255, 77, 16, 151)),
+                          borderRadius: BorderRadius.circular(13),
+                        ),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Robert Fox',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            Text('15:43')
+                          ],
+                        ),
+                        subtitle: Row(
+                          children: [
+                            Icon(
+                              Icons.download_done_sharp,
+                              color: Colors.green,
+                            ),
+                            Text("Hey, lets play basketball"),
+                          ],
+                        ),
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('images/robert.png'),
+                        ),
                       ),
-                      subtitle: Row(
-                        children: [
-                          Icon(
-                            Icons.download_done_sharp,
-                            color: Colors.green,
-                          ),
-                          Text("Hey, lets play basketball"),
-                          // Container(
-                          //   child: Text(),
-                          //   width: 30,
-                          //   height: 30,
-                          //   decoration: BoxDecoration(
-                          //       color: numberColor,
-                          //       borderRadius: BorderRadius.circular(50)),
-                          // )
-                        ],
+                      SizedBox(
+                        height: 23,
                       ),
-                      leading: CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage('images/robert.png'),
+                      ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstPage(
+                                    '      01:20',
+                                    '10:23      ',
+                                    '      12:29',
+                                    '11:23      ',
+                                    '      12:43',
+                                    '08:20      ',
+                                    '      09:26',
+                                    '05:29      ',
+                                    '      12:03',
+                                    '02:02      ',
+                                    '      11:11',
+                                    'images/esther.png',
+                                    'How are you',
+                                    'hello',
+                                    "I'm great thank's",
+                                    "I am in Paris",
+                                    'hello',
+                                    "I'm great and you",
+                                    "Very good",
+                                    'Esther Howard ',
+                                    'last seen recently',
+                                    "Where are you now",
+                                    "I'm at home and you")),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(255, 77, 16, 151)),
+                          borderRadius: BorderRadius.circular(13),
+                        ),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Esther Howard',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            Text('15:29')
+                          ],
+                        ),
+                        subtitle: Row(
+                          children: [
+                            Icon(
+                              Icons.download_done_sharp,
+                              color: Colors.green,
+                            ),
+                            Text("Perfect, see you later"),
+                          ],
+                        ),
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('images/esther.png'),
+                        ),
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        height: 23,
+                      ),
+                      ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstPage(
+                                    '      01:20',
+                                    '10:23      ',
+                                    '      12:29',
+                                    '11:23      ',
+                                    '      12:43',
+                                    '08:20      ',
+                                    '      09:26',
+                                    '05:29      ',
+                                    '      12:03',
+                                    '02:02      ',
+                                    '      11:11',
+                                    'images/jacob.png',
+                                    'How are you',
+                                    'hello',
+                                    "I'm great thank's",
+                                    "I am in Paris",
+                                    'hello',
+                                    "I'm great and you",
+                                    "Very good",
+                                    'Jacob Jones',
+                                    'last seen recently',
+                                    "Where are you now",
+                                    "I'm at home and you")),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(255, 77, 16, 151)),
+                          borderRadius: BorderRadius.circular(13),
+                        ),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Jacob Jones',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            Text('14.53')
+                          ],
+                        ),
+                        subtitle: Row(
+                          children: [
+                            Icon(
+                              Icons.download_done_sharp,
+                              color: Colors.green,
+                            ),
+                            Text("Oh you’re right lmao"),
+                          ],
+                        ),
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('images/jacob.png'),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 23,
+                      ),
+                      ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstPage(
+                                    '      01:20',
+                                    '10:23      ',
+                                    '      12:29',
+                                    '11:23      ',
+                                    '      12:43',
+                                    '08:20      ',
+                                    '      09:26',
+                                    '05:29      ',
+                                    '      12:03',
+                                    '02:02      ',
+                                    '      11:11',
+                                    'images/bessie.png',
+                                    'How are you',
+                                    'hello',
+                                    "I'm great thank's",
+                                    "I am in Paris",
+                                    'hello',
+                                    "I'm great and you",
+                                    "Very good",
+                                    'Bessie Cooper',
+                                    'online',
+                                    "Where are you now",
+                                    "I'm at home and you")),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(255, 77, 16, 151)),
+                          borderRadius: BorderRadius.circular(13),
+                        ),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Bessie Cooper',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            Text('12.27')
+                          ],
+                        ),
+                        subtitle: Row(
+                          children: [
+                            Icon(
+                              Icons.download_done_sharp,
+                              color: Colors.green,
+                            ),
+                            Text("Don’t forget abt tonight babe"),
+                          ],
+                        ),
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('images/bessie.png'),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 23,
+                      ),
+                      ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstPage(
+                                    '      01:20',
+                                    '10:23      ',
+                                    '      12:29',
+                                    '11:23      ',
+                                    '      12:43',
+                                    '08:20      ',
+                                    '      09:26',
+                                    '05:29      ',
+                                    '      12:03',
+                                    '02:02      ',
+                                    '      11:11',
+                                    'images/albert.png',
+                                    'How are you',
+                                    'hello',
+                                    "I'm great thank's",
+                                    "I am in samarkand",
+                                    'hello',
+                                    "I'm great and you",
+                                    "Very good",
+                                    'Albert Flores',
+                                    'online',
+                                    "Where are you now",
+                                    "I'm at home and you")),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(255, 77, 16, 151)),
+                          borderRadius: BorderRadius.circular(13),
+                        ),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Albert Flores',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            Text('12.20')
+                          ],
+                        ),
+                        subtitle: Row(
+                          children: [
+                            Icon(
+                              Icons.download_done_sharp,
+                              color: Colors.green,
+                            ),
+                            Text("Bro wanna play basketball..."),
+                          ],
+                        ),
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('images/albert.png'),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 23,
+                      ),
+                      ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstPage(
+                                    '      01:20',
+                                    '10:23      ',
+                                    '      12:29',
+                                    '11:23      ',
+                                    '      12:43',
+                                    '08:20      ',
+                                    '      09:26',
+                                    '05:29      ',
+                                    '      12:03',
+                                    '02:02      ',
+                                    '      11:11',
+                                    'images/floyd.png',
+                                    'How are you',
+                                    'hello',
+                                    "I'm great thank's",
+                                    "men seni kutyapman ",
+                                    'hello',
+                                    "I'm great and you",
+                                    "Jonim nima qilayabsiz",
+                                    'Floyd Miles',
+                                    'online',
+                                    "Where are you now",
+                                    "I'm at home and you")),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(255, 77, 16, 151)),
+                          borderRadius: BorderRadius.circular(13),
+                        ),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Floyd Miles',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            Text('11.40')
+                          ],
+                        ),
+                        subtitle: Row(
+                          children: [
+                            Icon(
+                              Icons.download_done_sharp,
+                              color: Colors.green,
+                            ),
+                            Text("Hey, let’s go  party "),
+                          ],
+                        ),
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('images/floyd.png'),
+                        ),
+                      ),
+                    ],
+                  ),
                 )
                 // Expanded(
                 //     child: ListView(

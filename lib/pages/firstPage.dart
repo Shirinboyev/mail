@@ -72,7 +72,7 @@ class _FirstPageState extends State<FirstPage> {
                   Column(
                     children: [
                       Text(widget.name),
-                      Text(widget.olnine),
+                      Text(widget.olnine,style: TextStyle(fontSize: 16),),
                     ],
                   ),
                   Icon(Icons.videocam_rounded),
@@ -83,213 +83,306 @@ class _FirstPageState extends State<FirstPage> {
         body: Container(
           alignment: Alignment.center,
           decoration: BoxDecoration(),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 7,
-                child: ListView(
-                  children: [
-                    Row(
-                      children: [],
-                    ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: ListView(
+                    children: [
+                      Row(
+                        children: [],
+                      ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(right: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.hesms)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(right: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.hesms,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            children: [Text(widget.time)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(00),
+                                  bottomRight: Radius.circular(15),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              children: [Text(widget.time)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.mesms)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.mesms,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [Text(widget.time1)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(15),
+                                  bottomRight: Radius.circular(0),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [Text(widget.time1)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.txt)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(right: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.txt,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            children: [Text(widget.time2)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(00),
+                                  bottomRight: Radius.circular(15),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              children: [Text(widget.time2)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.mesms1)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.mesms1,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [Text(widget.time3)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(15),
+                                  bottomRight: Radius.circular(0),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [Text(widget.time3)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.hesms1)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(right: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.hesms1,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            children: [Text(widget.time4)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(00),
+                                  bottomRight: Radius.circular(15),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              children: [Text(widget.time4)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.smshe)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.smshe,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [Text(widget.time5)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(15),
+                                  bottomRight: Radius.circular(0),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [Text(widget.time5)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.smsme)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(right: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.smsme,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            children: [Text(widget.time6)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(00),
+                                  bottomRight: Radius.circular(15),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              children: [Text(widget.time6)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.hesms2)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.hesms2,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [Text(widget.time7)],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(15),
+                                  bottomRight: Radius.circular(0),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [Text(widget.time7)],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 200, top: 20),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 50,
-                            child: Center(child: Text(widget.mesms2)),
-                            decoration: BoxDecoration(
+                      Padding(
+                        padding: const EdgeInsets.only(right: 200, top: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 180,
+                              height: 50,
+                              child: Center(
+                                  child: Text(
+                                widget.mesms2,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                              decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 194, 167, 225),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          Row(
-                            children: [
-                              Text(widget.time8),
-                            ],
-                          )
-                        ],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(00),
+                                  bottomRight: Radius.circular(15),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Text(widget.time8),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
 
-                    // ListTile(
-                    //   title: Text(
-                    //     widget.txt,
-                    //     style: TextStyle(color: Colors.white, fontSize: 20),
-                    //   ),
+                      // ListTile(
+                      //   title: Text(
+                      //     widget.txt,
+                      //     style: TextStyle(color: Colors.white, fontSize: 20),
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.padding),
+                    hintText: 'Type here...',
+                    suffixIcon:
+                        IconButton(onPressed: () {}, icon: Icon(Icons.send)),
+                    suffix: Icon(Icons.keyboard_voice_sharp),
+                    // prefix: Row(
+                    //   children: [
+                    //     Icon(Icons.camera_alt_outlined),
+                    //     Icon(Icons.padding_outlined),
+                    //     Icon(Icons.keyboard_voice_sharp),
+                    //   ],
                     // ),
-                  ],
-                ),
-              ),
-              Expanded(
-                  child: TextFormField(
-                decoration: InputDecoration(
-                  icon: Icon(Icons.padding),
-                  hintText: 'Type here...',
-                  suffixIcon:
-                      IconButton(onPressed: () {}, icon: Icon(Icons.send)),
-                  suffix: Icon(Icons.keyboard_voice_sharp),
-                  // prefix: Row(
-                  //   children: [
-                  //     Icon(Icons.camera_alt_outlined),
-                  //     Icon(Icons.padding_outlined),
-                  //     Icon(Icons.keyboard_voice_sharp),
-                  //   ],
-                  // ),
-                  border: OutlineInputBorder(gapPadding: 1),
-                ),
-              ))
-            ],
+                    border: OutlineInputBorder(gapPadding: 1),
+                  ),
+                ))
+              ],
+            ),
           ),
         ),
       ),

@@ -86,16 +86,17 @@ class _LoginPageState extends State<LoginPage> {
                       backgroundColor: Color.fromARGB(255, 126, 32, 174),
                       fixedSize: Size(250, 56)),
                   onPressed: () {
-                    if (controller1.text.length != '@gmail.com') {
+                    if (controller1.text.length != ' ' &&
+                        controller1.text.length > 0 ||
+                        controller2.text.length != ' ' &&
+                        controller1.text.length > 0) {
+                          
                     Navigator.push(context,
                           MaterialPageRoute(
-                              builder: (context) => PersonalPage()));
+                              builder: (context) => Friend()));
                     }
-                    if (controller1.text.length == 'ASdASDASDFASDFASD') {}
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Friend()));
+                     
+                   
                   },
                   child: Text(
                     'Login',
